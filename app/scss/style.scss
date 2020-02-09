@@ -1,0 +1,119 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+/* header */
+
+.header {
+    background-image: url(/img/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.header-wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+.header-nav__list {
+    display: flex;
+    .header-nav__list-link{
+        margin-right: 16px;
+        font-size: 12px;
+        line-height: 15px;
+        &:hover {
+            padding-bottom: 5px;
+            border-bottom: 3px solid #009FFF;
+            border-radius: 0.5px;
+        }
+    }
+    
+}
+.header-login__btn-login {
+    margin-right: 8px;
+    padding: 8px 32px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 500;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    cursor: pointer;
+}
+.title-slider__item-btn ,
+.header-login__btn-sing {
+    padding: 8px 32px;
+    background: linear-gradient(90deg, #009FFF 0%, #4C49C4 100%);
+    color: #fff;
+    border-radius: 16px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+.header-login__language {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    padding: 5px 9px;
+    margin-left: 8px;
+}
+
+.title-slider__item {
+    margin-top: 66px;
+    position: relative;
+    max-width: 302px;
+    .title-slider__item-text {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .title-slider__item-btn {
+        padding: 16px 64px ;
+    }
+   
+}
+.title-slider__item-img{
+    position: absolute;
+    bottom: 105px;
+    left: 27px;
+}
+.slick-dots {
+    font-size: 0px;
+    button{
+        border: 0.5px solid #FFFFFF;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: transparent;
+        margin-top: 16px;
+        outline-style: none;
+    }
+}
+.slick-active {
+    button {
+        background: #009FFF;
+        border: none;
+        &::before{
+            content: '';
+            
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid  #009FFF;
+            
+        }
+    }
+    
+}
+@import "media";
+
+

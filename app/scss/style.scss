@@ -10,7 +10,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 683px;
     position: relative;
 }
 .header-wrapper {
@@ -67,7 +67,7 @@
 }
 
 .title-slider__item {
-    margin-top: 66px;
+    margin-top: 130px;
     position: relative;
     max-width: 302px;
     .title-slider__item-text {
@@ -76,21 +76,30 @@
         line-height: 44px;
     }
     .title-slider__item-btn {
-        padding: 16px 64px ;
+        padding: 17px 63px;
+        background: linear-gradient(90deg, #009FFF 0%, #4C49C4 100%);
+        color: #fff;
+        border-radius: 16px;
+        border: none;
+        font-weight: 500;
+        cursor: pointer;
     }
    
 }
 .title-slider__item-img{
     position: absolute;
-    bottom: 105px;
-    left: 27px;
+    bottom: 75px;
+    left: 22px;
 }
 .slick-dots {
     font-size: 0px;
+    position: absolute;
+    right: -110px;
+    top: 180px;
     button{
         border: 0.5px solid #FFFFFF;
-        width: 10px;
-        height: 10px;
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
         background: transparent;
         margin-top: 16px;
@@ -103,9 +112,8 @@
         border: none;
         &::before{
             content: '';
-            
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             background: transparent;
             border: 1px solid  #009FFF;
@@ -114,6 +122,51 @@
     }
     
 }
+
+
+/* WHY US */
+
+.wrapper {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+.whyUs {
+    text-align: center;
+    .whyUs-content {
+    max-width: 700px;
+    margin: 0 auto;
+        .whyUs-text {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 27px;
+        }
+        .whyUs-title {
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 44px;
+            color: #FFFFFF;
+        }
+    }
+} 
+.whyUs-advantages {
+    display: flex;
+    flex-wrap: wrap;
+    .whyUs-advantages__item {
+        max-width: 210px;
+        margin-top: 75px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .whyUs-advantages__item:nth-child(5),
+    .whyUs-advantages__item:nth-child(4),
+    .whyUs-advantages__item:nth-child(2),
+    .whyUs-advantages__item:nth-child(1) {
+        margin-right: 250px;
+    }
+}
+
 @import "media";
 
 

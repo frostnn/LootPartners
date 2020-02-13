@@ -23,16 +23,53 @@ $('.news-slider').slick({
 
 
 
-let faqBtn = document.querySelectorAll('.block-btn__item'),
-    blockBtn = document.querySelector('.block-btn'),
-    questionBtn = document.querySelector('.faq-questions__name'),
+
+ const  questionBtn = document.querySelector('.faq-questions__name'),
     answer = document.querySelector('.faq-questions__answer'),
     open = document.querySelector('.open'),
     blockQuestions = document.querySelector('.general-faq__questions'),
     blockQuestions1 = document.querySelector('.financial-faq__questions'),
     blockQuestions2 = document.querySelector('.technical-faq__questions'),
-    questions = document.querySelectorAll('.faq-questions');
-   
+    questions = document.querySelectorAll('.faq-questions'),
+    conten = document.querySelector('.conten-question'); 
+
+const  tabs = (headerSelector, tabSelector, contentSelector, activeClass) => { 
+    let faqBtn = document.querySelectorAll(headerSelector),
+        blockBtn = document.querySelector(tabSelector),
+        content = document.querySelectorAll(contentSelector);
+
+  function hideTabContent() {
+    content.forEach(item => {
+      item.style.display = 'none';
+    })
+    faqBtn.forEach(item => {
+      item.classList.remove(activeClass)
+    })
+  }
+
+  function showTabContent(i = 0) {
+    content[i].style.display = 'block';
+    faqBtn[i].classList.add(activeClass);
+  }
+
+  hideTabContent();
+  showTabContent();
+
+blockBtn.addEventListener('click', (e) =>{
+  const target = e.target;
+  if(target.classList.contains(tabSelector.replace(/\./, "")) || (target.parentNode.classList.contains(tabSelector.replace(/\./, "")))) {
+    faqBtn.forEach((item, i) =>{
+      if(target == item || target.parentNode ==item){
+        hideTabContent();
+        showTabContent(i);
+      }
+    });
+  }
+});
+}
+
+tabs('.block-btn__item', '.block-btn', '.conten-question',  'active-btn')
+
 questionBtn.addEventListener('click', function(){
   if(answer.style.display == 'block') {
       answer.style.display = 'none';
@@ -41,73 +78,9 @@ questionBtn.addEventListener('click', function(){
   open.classList.toggle('close');
 }) 
 
-$('.block-btn__item.gen').click(function() {
-  $('.financial-faq__questions').hide();
-  $('.technical-faq__questions').hide();
-  $('.general-faq__questions').show();
-  $('.block-btn__item.gen').addClass('active-btn');
-  $('.block-btn__item.tech').removeClass('active-btn');
-  $('.block-btn__item.fin').removeClass( 'active-btn');
-});
-
-$('.block-btn__item.fin').click(function() {
-  $('.financial-faq__questions').show();
-  $('.technical-faq__questions').hide();
-  $('.general-faq__questions').hide();
-  $('.block-btn__item.fin').addClass('active-btn');
-  $('.block-btn__item.tech').removeClass('active-btn');
-  $('.block-btn__item.gen').removeClass( 'active-btn');
-});
-
-$('.block-btn__item.tech').click(function() {
-  $('.technical-faq__questions').show();
-  $('.general-faq__questions').hide();
-  $('.financial-faq__questions').hide();
-  $('.block-btn__item.tech').addClass('active-btn');
-  $('.block-btn__item.fin').removeClass('active-btn');
-  $('.block-btn__item.gen').removeClass( 'active-btn');
-});
 
 
-    
-/* blockBtn.addEventListener('click', function(event){
-  let target = event.target;
-  if(target && target.classList.contains('block-btn__item')){
-    for (let i = 0 ; i < faqBtn.length; i++){
-      if(target == faqBtn[0]){
-        blockQuestions.classList.add('show')
-        faqBtn[0].classList.toggle('active-btn');
-      }
 
 
-  */
 
 
-  function hideTabContent(a) {
-
-    for (let i = a; i < answer.length; i++){
-      answer[i].classList.remove('show');
-      answer[i].classList.add('hide');
-    }
-  }
-    hideTabContent(1);
-
-    function showTabContent(b){
-      if(answer[b].classList.contains('hide')) {
-        answer[b].classList.remove('hide');
-          answer[b].classList.add('show');
-      }
-    }
-
-    blockQuestions.addEventListener('click', function(event) {
-      let target = event.target;
-      if ( target && target.classList.contains('faq-questions__answer')) {
-        for (let i = 0; i < questions.length; i++) {
-          if (target == questions[i]) {
-            hideTabContent(0);
-            showTabContent(i);
-          break;
-          }
-        }
-      }
-    });

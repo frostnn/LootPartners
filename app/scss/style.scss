@@ -95,7 +95,7 @@
 }
 .title-slider__item-img{
     position: absolute;
-    bottom: 75px;
+    bottom: 119px;
     left: 22px;
 }
 .slick-dots {
@@ -130,7 +130,7 @@
 .slider-arrows__down {
     position: absolute;
     right: -110px;
-    bottom: 129px;
+    bottom: 84px;
     width: 19px;
     z-index: 2;
     cursor: pointer;
@@ -678,12 +678,12 @@
         top: -8px;
     }
 }
-.service-social__name:nth-child(2) {
+.service-social__telegram {
     &::before {
         background: url(/img/telegram.png);
     }
 }
-.service-social__name:nth-child(3) {
+.service-social__mail {
     &::before {
         background: url(/img/email.png);
     }
@@ -708,7 +708,7 @@ max-width: 550px;
     border: none;
     padding-left: 20px;
     margin-right: 32px;
-
+    outline-style: none;
 }
 .form-areatext {
     width: 512px;
@@ -718,6 +718,7 @@ max-width: 550px;
     padding-top: 20px;
     padding-left: 20px;
     margin-top: 32px;
+    outline-style: none;
 }
 .form-btn {
     padding: 12px 32px;

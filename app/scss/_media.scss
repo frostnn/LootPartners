@@ -1,0 +1,109 @@
+@media(max-width: $screen-lg){
+  .wrapper,
+  .header-wrapper {
+	max-width: 980px;
+  }
+  .header-logo__main {
+    max-width: 185px;
+  }
+  .header-nav__list-item {
+    .header-nav__list-link {
+      font-size: 10px;
+    }
+  }
+  .commission-btn, 
+  .footer-login__btn-sing, 
+  .title-slider__item-btn,
+  .header-login__btn-sing,
+  .footer-login__btn-login, 
+  .header-login__btn-login { 
+    padding: 5px 20px;
+    font-size: 12px;
+  }
+  .header-login__language,
+  .footer-login__btn-login, 
+  .header-login__btn-login {
+	padding: 4px 20px;
+  }
+  .header-login__language {
+	padding: 4px 7px;
+    font-size: 12px;
+  }
+  .title-slider__item-img {
+   	display: none;
+  }
+  .title-slider__item .title-slider__item-text {
+    font-size: 28px;
+  }
+  .title-slider__item .title-slider__item-btn {
+    padding: 12px 29px;
+  }
+  .slider-arrows__up {
+    top: 177px;
+    width: 15px;
+  }
+  .slider-arrows__down {
+    bottom: 75px;
+    max-width: 15px;
+  }
+  .slick-dots button {
+    max-width: 15px;
+    max-height: 15px;
+  }
+  .commission, .whyUs {
+    margin-top: 84px;
+  }
+  .whyUs-advantages {
+    justify-content: space-around;
+  }
+  .whyUs-advantages .whyUs-advantages__item:nth-child(5), 
+  .whyUs-advantages .whyUs-advantages__item:nth-child(4), 
+  .whyUs-advantages .whyUs-advantages__item:nth-child(2), 
+  .whyUs-advantages .whyUs-advantages__item:nth-child(1) {
+    margin-right: 72px;
+  }
+  .commission-pyramid {
+    margin-left: 218px;
+    .commission-btn {
+      margin-right: -43px;
+    }
+  }
+  .recommendation-slider.slick-initialized.slick-slider {
+    width: 842px;
+    margin: 0 auto;
+  }
+  .recommendation-slider__block .recommendation-slider__block-link {
+    font-size: 22px;
+    margin-left: 18px;
+  }
+  .recommendation-slider__block .recommendation-slider__block-img {
+   
+  }
+  .recommendation-slider__block .recommendation-slider__block-text {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 14px 39px 32px;
+  }
+  .block-brand {
+    margin-top: 120px;
+  }
+  .brand-about__text {
+    font-size: 14px;
+  }
+  .news-slider__item-img {
+    max-width: 306px;
+  }
+  .news-slider.slick-initialized .slick-slide {
+    margin-right: 20px;
+  }
+  .block-btn__item.tech {
+    margin-right: 0;
+  }
+  .block-btn__item.active-btn {
+    padding: 28px 85px;
+  }
+  .block-btn__item {
+    font-size: 14px;
+    padding: 26px 85px;
+  }
+}

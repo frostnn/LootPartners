@@ -7,10 +7,19 @@ $('.title-slider').slick({
 })
 
 $('.recommendation-slider').slick({
-  slidesToShow: 2,
   slidesToScroll: 1,
   prevArrow: '<img class="slider-arrows__left" src="img/arrow1.png" alt="" ></img>',
   nextArrow: '<img class="slider-arrows__right" src="img/arrow2.png" alt="" ></img>', 
+  slidesToShow: 2,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+  ]
 })
 
 $('.news-slider').slick({
@@ -18,20 +27,29 @@ $('.news-slider').slick({
   slidesToScroll: 1,
   dots: true,
   arrows: false,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+  ]
 })
 
 
-
-
-
  const  questionBtn = document.querySelector('.faq-questions__name'),
-    answer = document.querySelector('.faq-questions__answer'),
-    open = document.querySelector('.open'),
-    blockQuestions = document.querySelector('.general-faq__questions'),
-    blockQuestions1 = document.querySelector('.financial-faq__questions'),
-    blockQuestions2 = document.querySelector('.technical-faq__questions'),
-    questions = document.querySelectorAll('.faq-questions'),
-    conten = document.querySelector('.conten-question'); 
+        answer = document.querySelector('.faq-questions__answer'),
+        open = document.querySelector('.open'),
+        blockQuestions = document.querySelector('.general-faq__questions'),
+        blockQuestions1 = document.querySelector('.financial-faq__questions'),
+        blockQuestions2 = document.querySelector('.technical-faq__questions'),
+        questions = document.querySelectorAll('.faq-questions'),
+        conten = document.querySelector('.conten-question'); 
+        openMenu = document.querySelector('.burger-menu'),
+        closeMenu = document.querySelector('.close-mobile__btn'),
+        mobileMenu = document.querySelector('.mobile-menu');
 
 const  tabs = (headerSelector, tabSelector, contentSelector, activeClass) => { 
     let faqBtn = document.querySelectorAll(headerSelector),
@@ -80,6 +98,14 @@ questionBtn.addEventListener('click', function(){
 
 
 
+openMenu.addEventListener('click', function(){
+  mobileMenu.classList.add('show');
+})
+
+ closeMenu.addEventListener('click', function(){
+    mobileMenu.classList.remove('show');
+})
+ 
 
 
 

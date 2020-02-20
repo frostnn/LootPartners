@@ -1,3 +1,6 @@
+
+/* DEKSTOP */
+
 @media(max-width: $screen-lg){
   .wrapper,
   .header-wrapper {
@@ -76,9 +79,6 @@
     font-size: 22px;
     margin-left: 18px;
   }
-  .recommendation-slider__block .recommendation-slider__block-img {
-   
-  }
   .recommendation-slider__block .recommendation-slider__block-text {
     font-size: 14px;
     line-height: 20px;
@@ -105,5 +105,314 @@
   .block-btn__item {
     font-size: 14px;
     padding: 26px 85px;
+  }
+}
+
+/* PAD */
+
+@media(max-width: $screen-md){ 
+  .wrapper,
+  .header-wrapper {
+	max-width: 720px;
+  }
+  .burger-menu {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 2px;
+    .layer-down,
+    .layer-mid,
+    .layer-up {
+      position: relative;
+      display: inline-block;
+      width: 18px;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 10px;
+      cursor: pointer;
+      &::before {
+        content: '';
+        position: absolute;
+        left: -7px;
+        bottom: 0;
+        width: 2px;
+        height: 2px;
+        border-radius: 10px;
+        background-color: #fff;
+      }
+    }
+  }
+  .layer-down,
+  .layer-mid {
+    margin-top: 6px;
+  }
+  .layer-mid {
+    height: 1px;
+  }
+  .neader-nav {
+    display: none;
+  }
+  .header-logo__main {
+    margin-right: 242px;
+  }
+  .slick-dots {
+    display: none;
+  }
+  .title-slider__item .title-slider__item-text {
+    font-size: 24px;
+    max-width: 225px;
+  } 
+  .slider-arrows__down.slick-arrow,
+  .slider-arrows__up.slick-arrow {
+    display: none;
+  }
+  .title-slider__item {
+    margin-top: 55px;
+  }
+  .commission .commission-content .commission-text, 
+  .commission .commission-content .whyUs-text, 
+  .commission .whyUs-content .commission-text, 
+  .commission .whyUs-content .whyUs-text, 
+  .whyUs .commission-content .commission-text, 
+  .whyUs .commission-content .whyUs-text, .whyUs .whyUs-content .commission-text, 
+  .whyUs .whyUs-content .whyUs-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .whyUs-advantages .whyUs-advantages__item:nth-child(5), 
+  .whyUs-advantages .whyUs-advantages__item:nth-child(4), 
+  .whyUs-advantages .whyUs-advantages__item:nth-child(2), 
+  .whyUs-advantages .whyUs-advantages__item:nth-child(1) {
+    margin-right: 63px;
+  }
+  
+  .mobile-menu.show {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background: #131935;
+    opacity: 0.9;
+    width: 100%;
+    height: 530px;
+    z-index: 4;
+  }
+  
+ .header-logo__mobile {
+    max-width: 165px;
+    margin-top: 40px;
+ }
+ .close-mobile__btn {
+   position: absolute;
+   right: 10px;
+   top: 10px;
+   font-size: 16px;
+   font-weight: 600;
+   color: #fff;
+   cursor: pointer;
+ }
+ .mobile-nav__list-item {
+  margin-top: 32px;
+  text-align: center;
+ }
+ .mobile-nav__list-link {
+    margin-top: 32px;
+    font-size: 18px;
+    text-align: center;
+ }
+ .social-title {
+  font-size: 18px;
+  color: #FFFFFF;
+ }
+ .social-icon {
+   margin-right: 10px;
+   width: 40px;
+   height: 40px;
+ }
+ .commission-pyramid {
+  margin-left: 91px;
+  }
+  .commission-btn {
+    margin-right: 0;
+    padding: 12px 34px;
+    left: 184px
+  }
+  .whyUs-advantages__item-img {
+    max-width: 130px;
+    max-height: 130px;
+  }
+  .whyUs-advantages__item-text {
+    font-size: 14px;
+  }
+  .recommendation-slider.slick-initialized.slick-slider {
+    width: 583px;
+  }
+  .recommendation-slider__block .recommendation-slider__block-text {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 14px 12px 13px;
+  }
+  .slider-arrows__left {
+    left: -31px;
+  }
+  .brand-about__img {
+    display: none;
+  }
+  .brand-app {
+    margin-top: 0;
+  }
+  .brand-product {
+     margin-top: 30px;
+  }
+.brand-blocked, 
+.brand-target {
+  margin-top: 58px;
+}
+  .brand-app__version .brand-app__version-item, 
+  .brand-app__version .brand-product__advantage-item, 
+  .brand-product__advantage .brand-app__version-item, 
+  .brand-product__advantage .brand-product__advantage-item {
+    margin-right: 52px;
+  }
+  .brand-payment__currency,
+  .brand-payment__languages, 
+  .brand-payment__service  {
+    width: 207px;
+  }
+  .block-btn {
+    flex-direction: column;
+  }
+  .block-btn__item{
+    margin-top: 30px;
+  }
+  .form-areatext {
+    width: 300px;
+  }
+ 
+  .service {
+    margin-right: 60px;
+  }
+  .form-field:nth-child(2) {
+    margin-top: 30px;
+  }
+  @media (max-width: $screen-sm) {
+    .wrapper,
+    .header-wrapper {
+    max-width: 320px;
+    }
+    .header-logo__main {
+      display: none;
+    }
+  }
+  .slider-arrows__down.slick-arrow,
+  .slider-arrows__up.slick-arrow {
+    display: none;
+  }
+  .slick-dots button{
+    display: none;
+  }
+  .whyUs-advantages 
+  .whyUs-advantages__item:nth-child(5), 
+  .whyUs-advantages .whyUs-advantages__item:nth-child(4), 
+  .whyUs-advantages .whyUs-advantages__item:nth-child(2), 
+  .whyUs-advantages .whyUs-advantages__item:nth-child(1) {
+    margin-right: 0;
+  }
+  .commission-pyramid__step {
+    width: 320px;
+  
+  }
+  .commission-pyramid__step-shadow {
+      width: 320px;
+      
+  
+  }
+  .commission-pyramid__step1 {
+    
+      width: 245px;
+    
+  }
+  .commission-pyramid__step-shadow1 {
+    
+      width: 245px;
+    
+  }
+  .commission-pyramid__step2 {
+    
+      width: 165px;
+    
+  }
+  .commission-pyramid__step-shadow2 {
+      
+      width: 165px;
+    
+  }
+  .commission-pyramid__step-text {
+      display: inline;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 29px;
+      text-align: center;
+      padding-left: 20px;
+  }
+  .commission-pyramid__step-percent {
+      font-weight: 500;
+    
+  }
+  .commission-pyramid {
+    margin: 0;
+    margin-top: 250px;
+  }
+  .triangle-content {
+    display: none;
+  }
+  .commission-pyramid__triangle {
+    max-width: 100px;
+    max-height: 140px;
+    top: -153px;
+    left: 112px;
+  }
+  .commission-btn {
+    left: 80px;
+  }
+  .block-recommendation {
+    margin-top: 160px;
+  }
+  .recommendation-slider.slick-initialized.slick-slider {
+    width: 290px;
+  }
+  .brand {
+    flex-direction: column;
+  }
+  .block-brand {
+    margin-top: 80px;
+  }
+  .brand-app__version .brand-app__version-item, 
+  .brand-app__version .brand-product__advantage-item, 
+  .brand-product__advantage .brand-app__version-item,
+  .brand-product__advantage .brand-product__advantage-item {
+    margin-right: 0;
+  }
+  .brand-payment {
+    flex-direction: column;
+    align-items: center;
+  } 
+  .brand-payment__currency,
+  .brand-payment__languages {
+      margin-top: 80px;
+  }
+  .contacts {
+    flex-direction: column;
+  }
+  .payment-system__list {
+    flex-wrap: wrap;
+  }
+  .footer-nav {
+    display: none;
+  }
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-content__img {
+    display: none;
   }
 }
